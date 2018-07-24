@@ -1,0 +1,210 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* CORES PADRÃO */
+
+/* Snow */
+.white{
+    background-color: white !important;
+}
+.white-text{
+    color: white !important;
+}
+/* Snow */
+.cinza1{
+    background-color: #FAFAFA !important;
+}
+.cinza1-text{
+    color: #FAFAFA !important;
+}
+/* Pattens Blue */
+.cinza2{
+    background-color: #E0E1E2 !important;
+}
+.cinza2-text{
+    color: #E0E1E2 !important;
+}
+/* Link Water */
+.cinza3{
+    background-color: #D1D2D3 !important;
+}
+.cinza3-text{
+    color: #D1D2D3 !important;
+}
+/* Mischka */
+.cinza4{
+    background-color: #A7A9AC !important;
+}
+.cinza4-text{
+    color: #A7A9AC !important;
+}
+
+/* FONTS */
+.font1, h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+}
+.font2, p{
+    font-family: 'Lato', sans-serif;
+}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    line-height: inherit;
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+/* TAGS DE APOIO */
+.click{
+    cursor: pointer;
+}
+/* TAGS PADRÃO */
+
+body{
+    position: relative;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+header .logo h4{
+    margin: 0;
+    line-height: 60px;
+    text-align: center;
+}
+main{
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: auto;
+    padding-left: 250px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+main .menu{
+    width: 250px;
+    height: calc(100% - 60px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+main .menu ul li{
+    height: 50px;
+    line-height: 50px;
+}
+main .menu ul li a{
+    display: block;
+    height: 50px;
+    color: #666666;
+}
+main .menu ul li a:hover{
+    background-color: rgba(0, 0, 0, .08);
+}
+main .menu ul li a i{
+    width: 50px;
+    line-height: 48px;
+    font-size: 22px;
+    text-align: center;
+    float: left;
+}
+
+#content{}
+
+#paginas{
+    padding: 20px;
+    outline-offset: -1px;
+}
+#paginas ul li{
+    width: 100%;
+    height: 50px;
+    color: #D1D2D3;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 1px solid #D1D2D3;
+}
+#paginas ul li:hover{
+    color: #A7A9AC;
+}
+#paginas ul li:last-of-type{
+    border: none;
+}
+#paginas ul li.header{
+    height: 30px;
+    background-color: #A7A9AC;
+}
+#paginas ul li.header h6{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #666666;
+    line-height: 30px;
+}
+#paginas ul li.header h6.preenchimento{
+    width: 100px;
+}
+#paginas ul li h6{
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 46px;
+    padding: 0 10px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+#paginas ul li h6.titulo{
+    width: calc(50% - 50px);
+}
+#paginas ul li h6.url{
+    width: calc(50% - 50px);
+}
+#paginas ul li h6.editar{
+    width: 50px;
+    text-align: center;
+}
+#paginas ul li h6.deletar{
+    width: 50px;
+    text-align: center;
+}
+#paginas ul li h6 i{
+    font-size: 22px;
+}
