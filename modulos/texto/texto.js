@@ -22,6 +22,9 @@ function editarTexto(){
         container.prepend(html);
         activeFormulario();
     });
+    $(document).on('keyup', '#textarea', function(){
+        $(this).attr('value','<p>'+$(this).val()+'</p>');
+    })
     $(document).on('click', '.fecharTexto', function(){
         deactiveFormulario();
     })
