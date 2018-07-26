@@ -74,12 +74,12 @@
                     <div class="modulos white">
                         <h6>Módulos disponíveis:</h6>
                         <ul id="modulos">
-                            <li class="click texto">
+                            <li class="texto click">
                                 <i class="material-icons">notes</i> Texto
                                 <div class="deletarTexto"><i class="material-icons">delete</i></div>
                                 <div class="editarTexto"><i class="material-icons">create</i></div>
                             </li>
-                            <li class="click imagem">
+                            <li class="imagem click">
                                 <i class="material-icons">insert_photo</i> Imagem
                                 <div class="deletarImagem"><i class="material-icons">delete</i></div>
                                 <div class="editarImagem"><i class="material-icons">create</i></div>
@@ -109,18 +109,18 @@
             <script src="modulos/texto/texto.js"></script>
 
             <script>
+                var count = 0;
                 var drake = dragula([document.querySelector('#modulos'), document.querySelector('#palco')],{
-                    // copy: true
                     copy: function(el, source){
+                        var id = el.classList[0];
+                        var index = document.getElementsByClassName(id).length;
+                        el.setAttribute('id', id+'-'+index);
                         return true;
                     }
                 });
                 drake = dragula([document.querySelector('#palco')], {
                     copy: false
                 });
-                // drake.on('drag','el','source', function(){
-                //     console.log(el);
-                // })
 
             </script>
 
