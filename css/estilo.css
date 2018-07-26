@@ -51,17 +51,6 @@
 .font2, p{
     font-family: 'Lato', sans-serif;
 }
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-    src: local('Material Icons'),
-      local('MaterialIcons-Regular'),
-      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -74,15 +63,9 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
     font-feature-settings: 'liga';
   }
 
@@ -90,10 +73,18 @@
 .click{
     cursor: pointer;
 }
+.suave, .suave:hover{
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -ms-transition-duration: .3s;
+    -o-transition-duration: .3s;
+}
 /* TAGS PADRÃO */
 
 body{
     position: relative;
+    height: 100vh;
 }
 
 header{
@@ -114,10 +105,9 @@ main{
     height: calc(100vh - 60px);
     overflow: auto;
     padding-left: 250px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 1;
 }
 main .menu{
     width: 250px;
@@ -151,6 +141,27 @@ main .menu ul li a i{
 #paginas{
     padding: 20px;
     outline-offset: -1px;
+    overflow: hidden;
+}
+#paginas h3{}
+#paginas h3 a{
+    display: block;
+    float: right;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 20px;
+    background-color: #999999;
+    margin-top: 4px;
+    color: white;
+}
+#paginas h3 a:hover{
+    background-color: #666666;
+}
+#paginas h6{
+    padding: 10px 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 #paginas ul li{
     width: 100%;
@@ -207,4 +218,152 @@ main .menu ul li a i{
 }
 #paginas ul li h6 i{
     font-size: 22px;
+}
+#paginas .paginas-left{
+    width: calc(100% - 320px);
+    float: left;
+}
+#paginas .paginas-right{
+    width: 300px;
+    float: right;
+}
+#paginas #palco{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 10px;
+    padding-top: 0;
+    overflow: auto;
+}
+#paginas .palco{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+#paginas .palco i{
+    width: 50px;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+}
+#paginas .palco .texto{
+    width: calc(100% - 20px);
+    margin: 10px;
+    border: 1px solid #D1D2D3;
+    line-height: 50px;
+}
+#paginas .palco .texto .editarTexto,
+#paginas .palco .texto .deletarTexto{
+    display: block;
+    float: right;
+}
+#paginas .seo{
+    width: 100%;
+    position: relative;
+    background-color: white;
+    margin-top: 20px;
+    overflow: hidden;
+}
+#paginas .seo .content{
+    padding: 0 20px;
+}
+#paginas .modulos{
+    min-height: 300px;
+    overflow: hidden;
+}
+#paginas .modulos ul{
+    overflow: hidden;
+}
+#paginas .modulos ul li{
+    width: 100px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    color: #666666;
+    border: 0;
+}
+#paginas .modulos ul li:hover{
+    background-color: #FAFAFA;
+}
+#paginas .modulos ul li i{
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#formulario{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+}
+#formulario.active{
+    opacity: 1;
+    visibility: visible;
+}
+#formulario .fContainer{
+    width: 600px;
+    padding: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 300px);
+    transform: translateY(-50%);
+}
+#formulario .detalhe{
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition-duration: .6s;
+    z-index: 1;
+}
+#formulario.active .detalhe{
+    width: 700px;
+    height: 700px;
+    transition-delay: .3s;
+    transition-duration: .3s;
+}
+#formulario form{
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+}
+#formulario form h6{
+    padding: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+#formulario form h6 span{
+    float: right;
+    cursor: pointer;
+}
+#formulario form .input-field{
+    padding: 0 10px;
+}
+#formulario form .input-field label{
+    margin-left: 10px;
+}
+#formulario form button{
+    display: block;
+    line-height: 40px;
+    float: right;
+    margin: 0 10px 10px 0;
+    padding: 0 30px;
+    border-radius: 20px;
+}
+#formulario form button:hover{
+    background-color: #999999;
 }

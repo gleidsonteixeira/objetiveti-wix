@@ -1,0 +1,4 @@
+#paginas .modulos ul li .editarTexto,
+#paginas .modulos ul li .deletarTexto{
+    display: none;
+}
