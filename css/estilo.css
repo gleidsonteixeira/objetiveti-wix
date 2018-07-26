@@ -247,14 +247,17 @@ main .menu ul li a i{
     font-size: 20px;
     text-align: center;
 }
-#paginas .palco .texto{
+#paginas .palco .texto,
+#paginas .palco .imagem{
     width: calc(100% - 20px);
     margin: 10px;
     border: 1px solid #D1D2D3;
     line-height: 50px;
 }
-#paginas .palco .texto .editarTexto,
-#paginas .palco .texto .deletarTexto{
+#paginas .palco .editarTexto,
+#paginas .palco .deletarTexto,
+#paginas .palco .editarImagem,
+#paginas .palco .deletarImagem{
     display: block;
     float: right;
 }
@@ -284,12 +287,27 @@ main .menu ul li a i{
     border: 0;
 }
 #paginas .modulos ul li:hover{
-    background-color: #FAFAFA;
+    background-color: #ededed;
 }
 #paginas .modulos ul li i{
     display: block;
     font-size: 24px;
     margin-top: 20px;
+}
+#paginas .finalizar{
+    margin-top: 20px;
+}
+#paginas .finalizar button{
+    width: 100%;
+    display: block;
+    line-height: 46px;
+    padding: 0 30px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 2px solid #999999;
+}
+#paginas .finalizar button:hover{
+    background-color: #999999;
 }
 
 #formulario{
